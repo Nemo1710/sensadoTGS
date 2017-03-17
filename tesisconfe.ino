@@ -1,4 +1,4 @@
-
+//Inicializar variables
 float tgs822_superior=0;
 float tgs822_inferior=0;
 float tgs2610_superior=0;
@@ -13,6 +13,7 @@ unsigned long previo = 0;
 unsigned long previo1 = 0;
 unsigned long previo2 = 0;
 unsigned long previo3 = 0;
+
 
 void setup() {
   digitalWrite(reset,HIGH);
@@ -45,7 +46,7 @@ void loop() {
     }
   }
 
-  
+  //tiempo de muestreo a 50ms : 20 muestras por segundo
   if(actual-previo1>=50){
                    
   tgs822_superior=analogRead(A4);
